@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<h1>{{ article.getTitle() }}</h1>
+
+{{ article.getContent() | raw }}
+
+<p>
+    <strong>Tags:</strong>
+
+    {% for tag in article.tags %}
+        <a href="/article/tag/{{ tag.getSlug() }}">{{ tag.getName() }}</a>
+    {% endfor %}
+</p>
+{% endblock %}
