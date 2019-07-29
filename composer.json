@@ -9,7 +9,8 @@
         "illuminate/container": "^5.8",
         "league/container": "^3.3",
         "twig/twig": "^2.11",
-        "predis/predis": "^1.1"
+        "predis/predis": "^1.1",
+        "vlucas/phpdotenv": "^3.4"
     },
     "autoload": {
         "psr-4": {

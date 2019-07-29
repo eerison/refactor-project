@@ -18,7 +18,7 @@ class TwigServiceProvider extends AbstractServiceProvider
         $this->getContainer()
             ->add('twig', Environment::class)
             ->addArgument(FilesystemLoader::class)
-            ->addArgument(['cache' => 'bin/cache', 'debug' => true]);
+            ->addArgument(['cache' => 'var/cache']);
 
         $this->getContainer()
             ->add(FilesystemLoader::class)

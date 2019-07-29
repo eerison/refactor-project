@@ -17,9 +17,9 @@ class ClientHttpServiceProvider extends AbstractServiceProvider
         $this->getContainer()
             ->add('client_http.journal', Client::class)
             ->addArgument([
-                'base_uri' => 'https://api.thejournal.ie',
+                'base_uri' => getenv('API_JOURNAL_HOST'),
                 'headers' => ['content-type' => 'application/json'],
-                'auth' => ['codetest', 'AQJl5jewY2lZkrJpiT1cCJkj1tLPn64R']
+                'auth' => [getenv('API_JOURNAL_AUTH_USER'), getenv('API_JOURNAL_AUTH_PASSWORD')]
             ]);
     }
 }

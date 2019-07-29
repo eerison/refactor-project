@@ -17,6 +17,6 @@ class CacheServiceProvider extends AbstractServiceProvider
     {
         $this->getContainer()
             ->add('cache.redis', Client::class)
-            ->addArgument('tcp://localhost:6379');
+            ->addArgument(getenv('CACHE_REDIS_HOST'));
     }
 }
